@@ -152,7 +152,7 @@ export default function Contact() {
             {contacts.map((contact, index) => (
               <div
                 key={`contact-${index}`}
-                className="mb-4 flex items-center gap-4 rounded-lg border border-dashed border-gray-400 p-4"
+                className="mb-4 flex items-center gap-2 rounded-lg border border-dashed border-gray-400 p-4"
               >
                 {contact.icon}
                 <div>
