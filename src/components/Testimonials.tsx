@@ -19,11 +19,6 @@ export default function Testimonials() {
           </p>
         </blockquote>
         <figcaption className="flex items-center justify-center gap-2">
-          <img
-            className="h-6 w-6 rounded-full"
-            src="https://media.licdn.com/dms/image/D4D03AQHtRRC6y0zh9A/profile-displayphoto-shrink_800_800/0/1679850632800?e=1691020800&v=beta&t=tNFZARHH7ECoRUVm9867uK6ookzfgAm4hATgiB1Au3M"
-            alt="José Víctor (Víctor) Ardasse"
-          />
           <div className="flex items-center divide-x-2 divide-gray-200">
             <div className="pr-3 font-medium text-gray-900">José Víctor (Víctor) Ardasse</div>
             <div className="pl-3 text-sm font-light text-gray-500">
