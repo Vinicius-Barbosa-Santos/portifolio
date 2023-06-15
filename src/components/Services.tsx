@@ -23,8 +23,7 @@ export default function Services() {
           <span className="font-handwriting text-4xl">Serviços</span>
         </h2>
         <p className=" text-sm text-gray-600">
-          Posso atender uma gama completa de serviços, do front-end ao back-end
-          com banco de dados e sistemas.
+          Tenho a capacidade de lidar com uma alta demanda de serviços em front-end de forma eficiente e eficaz.
         </p>
       </div>
 
