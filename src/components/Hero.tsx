@@ -39,7 +39,7 @@ export default function Hero() {
               </a>
               <span className="italic text-gray-500">ou</span>
               <a
-                href="https://github.com/Vinicius-Barbosa-Santos/Vinicius-Barbosa-Santos/blob/master/Profile.pdf"
+                href="https://github.com/Vinicius-Barbosa-Santos/Vinicius-Barbosa-Santos/blob/master/curriculo.pdf"
                 target="_blank"
                 className="button flex items-center gap-2 text-gray-600 hover:text-gray-200"
                 download={'Profile.pdf'}
