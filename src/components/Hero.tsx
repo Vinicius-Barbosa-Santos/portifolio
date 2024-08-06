@@ -27,12 +27,12 @@ export default function Hero() {
             </h2>
 
             <p className="mb-6 text-center text-gray-400 md:text-left">
-              Atualmente, estou buscando oportunidades para desenvolver minhas habilidades como Desenvolvedor Front-end Jr. Tenho conhecimentos sólidos em criação de Landing Pages, E-mails Marketing e Banners Digitais. Tive a oportunidade de aplicar essas soluções para empresas conhecidas, como Natura, Bradesco e Pão de Açúcar.
+            Meu objetivo como desenvolvedor front-end é criar soluções inovadoras que impactem positivamente a sociedade. Tenho um compromisso firme em ajudar as empresas em que atuo a alcançarem o sucesso, oferecendo serviços profissionais e de excelência. Acredito que a tecnologia tem o poder de transformar negócios e melhorar a vida das pessoas, e é isso que me motiva diariamente.
             </p>
 
             <div className="flex items-center justify-center gap-2 md:justify-start">
               <a
-                href="#contact"
+                href="https://wa.me/5548992017424"
                 className="underline-thickness-2 font-bold text-white underline decoration-2 underline-offset-4 transition hover:decoration-blue-700"
               >
                 Fale comigo

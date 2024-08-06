@@ -24,7 +24,17 @@ export default function Skills() {
     {
       name: "React.js",
       icon: "images/react.svg",
-      level: 85,
+      level: 90,
+    },
+    {
+      name: "React Native",
+      icon: "images/react.svg",
+      level: 70,
+    },
+    {
+      name: "Node",
+      icon: "images/nodejs.svg",
+      level: 40,
     },
     {
       name: "Typescript",

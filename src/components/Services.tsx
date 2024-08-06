@@ -1,5 +1,7 @@
 import {
+  HiCommandLine,
   HiComputerDesktop,
+  HiDevicePhoneMobile,
 } from "react-icons/hi2"
 
 export default function Services() {
@@ -9,6 +11,16 @@ export default function Services() {
       description:
         "Desenvolvimento de sites e sistemas web estáticos e dinâmicos com React.js, Typescript, HTML5 e CSS3.",
       icon: <HiComputerDesktop className="h-12 w-12" />,
+    },
+    {
+      title: "Sistemas",
+      description: "Desenvolvimento de sistemas e APIs REST com Node.js.",
+      icon: <HiCommandLine className="h-12 w-12" />,
+    },
+    {
+      title: "Mobile",
+      description: "Desenvolvimento de aplicativos Android e iOS.",
+      icon: <HiDevicePhoneMobile className="h-12 w-12" />,
     },
   ]
 
@@ -23,18 +35,19 @@ export default function Services() {
           <span className="font-handwriting text-4xl">Serviços</span>
         </h2>
         <p className=" text-sm text-gray-600">
-          Tenho a capacidade de lidar com uma alta demanda de serviços em front-end de forma eficiente e eficaz.
+          Posso atender uma gama completa de serviços, do front-end ao back-end
+          com banco de dados e sistemas.
         </p>
       </div>
 
-      <div className="mt-6 flex justify-center md:flex-row">
+      <div className="mt-6 flex flex-col gap-2 md:flex-row">
         {services.map((service, index) => (
           <div
-            className="basis-2/3 rounded-lg bg-blue-700 p-4 text-white flex flex-col items-center"
+            className="basis-1/3 rounded-lg bg-blue-700 p-4 text-white"
             key={`service-${index}`}
           >
             <div className="mb-2">{service.icon}</div>
-            <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+            <h3 className="text-xl font-bold">{service.title}</h3>
             <p className="text-sm">{service.description}</p>
           </div>
         ))}

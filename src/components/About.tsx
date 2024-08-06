@@ -18,7 +18,7 @@ export default function About() {
           <div className="relative h-full w-full rounded-lg bg-gray-50 p-4">
             <p className="font-handwriting text-lg font-bold">Olá,</p>
             <p>
-              <span className="mr-1">Meu nome é</span>
+              <span className="mr-1">Meu nome é</span>  
               <span className="font-headline font-bold uppercase text-blue-900">
                 Vinicius Barbosa
               </span>
@@ -30,7 +30,7 @@ export default function About() {
                   <td className="font-headline font-bold uppercase text-blue-900">
                     Idade:
                   </td>
-                  <td>25</td>
+                  <td>26</td>
                 </tr>
                 <tr>
                   <td className="font-headline font-bold uppercase text-blue-900">
@@ -38,7 +38,7 @@ export default function About() {
                   </td>
                   <td>
                     <a
-                      href="tel:+551299999999"
+                      href="https://wa.me/5548992017424"
                       className="underline hover:text-blue-800"
                     >
                       +55 48 99201-7424
@@ -51,7 +51,7 @@ export default function About() {
                   </td>
                   <td>
                     <a
-                      href="https://goo.gl/maps/4yacADQtLB8jz8zn9?coh=178573&entry=tt"
+                      href="https://www.google.com/maps/place/Gov.+Celso+Ramos,+SC,+88190-000/@-27.3153024,-48.5624844,16z/data=!3m1!4b1!4m6!3m5!1s0x952759d8bab09ea1:0x661be0ca9dd5db00!8m2!3d-27.3159368!4d-48.5571297!16s%2Fm%2F09rxwl8?entry=ttu"
                       target="_blank"
                       className="underline hover:text-blue-800"
                     >
