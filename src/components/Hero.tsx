@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { HiDownload } from "react-icons/hi"
+import { HiDownload } from "react-icons/hi";
 
 export default function Hero() {
   return (
@@ -27,7 +27,12 @@ export default function Hero() {
             </h2>
 
             <p className="mb-6 text-center text-gray-400 md:text-left">
-            Meu objetivo como desenvolvedor front-end é criar soluções inovadoras que impactem positivamente a sociedade. Tenho um compromisso firme em ajudar as empresas em que atuo a alcançarem o sucesso, oferecendo serviços profissionais e de excelência. Acredito que a tecnologia tem o poder de transformar negócios e melhorar a vida das pessoas, e é isso que me motiva diariamente.
+              Meu objetivo como desenvolvedor front-end é criar soluções
+              inovadoras que impactem positivamente a sociedade. Tenho um
+              compromisso firme em ajudar as empresas em que atuo a alcançarem o
+              sucesso, oferecendo serviços profissionais e de excelência.
+              Acredito que a tecnologia tem o poder de transformar negócios e
+              melhorar a vida das pessoas, e é isso que me motiva diariamente.
             </p>
 
             <div className="flex items-center justify-center gap-2 md:justify-start">
@@ -39,10 +44,10 @@ export default function Hero() {
               </a>
               <span className="italic text-gray-500">ou</span>
               <a
-                href="https://github.com/Vinicius-Barbosa-Santos/Vinicius-Barbosa-Santos/blob/master/curriculo.pdf"
+                href="https://github.com/Vinicius-Barbosa-Santos/Vinicius-Barbosa-Santos/blob/master/Vinicius_Barbosa_Curriculo_Linked.pdf"
                 target="_blank"
                 className="button flex items-center gap-2 text-gray-600 hover:text-gray-200"
-                download={'Profile.pdf'}
+                download={"Profile.pdf"}
               >
                 <HiDownload />
                 Baixe meu CV
@@ -55,5 +60,5 @@ export default function Hero() {
       </section>
       <div className="absolute left-0 -mt-2 h-3 w-1/4 rounded-r-full bg-gradient-to-r from-blue-700 to-blue-600 md:w-1/3" />
     </>
-  )
+  );
 }

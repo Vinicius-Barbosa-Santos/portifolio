@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-no-target-blank */
-import { HiArrowTopRightOnSquare } from "react-icons/hi2"
+import { HiArrowTopRightOnSquare } from "react-icons/hi2";
 
 export default function Projects() {
   const projects = [
@@ -39,7 +39,7 @@ export default function Projects() {
       link: "https://chess-dev.netlify.app/",
       colSpan: "col-span-1",
     },
-  ]
+  ];
 
   return (
     <>
@@ -82,5 +82,5 @@ export default function Projects() {
       </section>
       <div className="absolute right-0 -mt-[6px] h-3 w-48 rounded-l-full bg-gradient-to-r from-gray-700 to-gray-600 md:w-96" />
     </>
-  )
+  );
 }

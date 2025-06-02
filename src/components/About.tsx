@@ -8,7 +8,11 @@ export default function About() {
           <span className="font-handwriting text-4xl">Mim</span>
         </h2>
         <p className="relative text-sm text-gray-600">
-          Estou sempre em busca de aprimoramento contínuo, mantendo-me atualizado com as últimas tendências e melhores práticas do setor. Tenho um interesse genuíno em aprender novas tecnologias e explorar formas inovadoras de criar interfaces intuitivas e visualmente atraentes para os usuários.
+          Estou sempre em busca de aprimoramento contínuo, mantendo-me
+          atualizado com as últimas tendências e melhores práticas do setor.
+          Tenho um interesse genuíno em aprender novas tecnologias e explorar
+          formas inovadoras de criar interfaces intuitivas e visualmente
+          atraentes para os usuários.
         </p>
         <div className="absolute left-1/2 top-3 z-0 h-10 w-10 rounded-lg bg-black-100/40" />
       </div>
@@ -18,7 +22,7 @@ export default function About() {
           <div className="relative h-full w-full rounded-lg bg-gray-50 p-4">
             <p className="font-handwriting text-lg font-bold">Olá,</p>
             <p>
-              <span className="mr-1">Meu nome é</span>  
+              <span className="mr-1">Meu nome é</span>
               <span className="font-headline font-bold uppercase text-blue-900">
                 Vinicius Barbosa
               </span>
@@ -30,7 +34,7 @@ export default function About() {
                   <td className="font-headline font-bold uppercase text-blue-900">
                     Idade:
                   </td>
-                  <td>26</td>
+                  <td>27</td>
                 </tr>
                 <tr>
                   <td className="font-headline font-bold uppercase text-blue-900">
@@ -77,5 +81,5 @@ export default function About() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,10 +1,10 @@
-import About from "./components/About"
-import Footer from "./components/Footer"
-import Hero from "./components/Hero"
-import Projects from "./components/Projects"
-import Services from "./components/Services"
-import Skills from "./components/Skills"
-import Testimonials from "./components/Testimonials"
+import About from "./components/About";
+import Footer from "./components/Footer";
+import Hero from "./components/Hero";
+import Projects from "./components/Projects";
+import Services from "./components/Services";
+import Skills from "./components/Skills";
+import Testimonials from "./components/Testimonials";
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
         <Footer />
       </footer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
