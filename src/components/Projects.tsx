@@ -33,17 +33,20 @@ export default function Projects() {
       colSpan: "col-span-1",
     },
     {
-      title: "Projeto Xadrez",
+      title: "Projeto Watch Me",
       image:
-        "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW9iaWxlJTIwYXBwfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
-      link: "https://chess-dev.netlify.app/",
+        "https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=500&q=60",
+      link: "https://watch-me-vinicius.netlify.app/",
       colSpan: "col-span-1",
     },
   ];
 
   return (
     <>
-      <section className="rounded-tl-[80px] bg-gradient-to-tr from-black to-gray-900 text-white md:rounded-tl-[180px]">
+      <section
+        id="projetos"
+        className="scroll-mt-16 md:scroll-mt-20 rounded-tl-[80px] bg-gradient-to-tr from-black to-gray-900 text-white md:rounded-tl-[180px]"
+      >
         <div className="container mx-auto max-w-4xl p-4 py-12">
           <div className="relative p-4 text-center">
             <h2 className="relative z-50 mb-2 text-white">

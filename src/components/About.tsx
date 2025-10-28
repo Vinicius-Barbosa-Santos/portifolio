@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-target-blank */
 export default function About() {
   return (
-    <section className="container mx-auto my-4 max-w-5xl p-4">
+    <section id="sobre" className="scroll-mt-16 md:scroll-mt-20 container mx-auto my-4 max-w-5xl p-4">
       <div className="relative p-4 text-center">
         <h2 className="relative z-50 mb-2 font-bold text-blue-900">
           <span className="mr-2 font-headline text-3xl">Sobre</span>
@@ -16,10 +16,10 @@ export default function About() {
         </p>
         <div className="absolute left-1/2 top-3 z-0 h-10 w-10 rounded-lg bg-black-100/40" />
       </div>
-
+      {/* restante inalterado */}
       <div className="mx-auto mt-20 max-w-lg">
-        <div className="relative w-full rounded-lg bg-blue-100 p-4 ps-20 md:h-64 md:ps-48">
-          <div className="relative h-full w-full rounded-lg bg-gray-50 p-4">
+        <div className="relative w-full rounded-2xl bg-white/60 p-6 ps-24 shadow-xl backdrop-blur-md md:h-64 md:ps-48">
+          <div className="relative h-full w-full rounded-2xl bg-gray-50/70 p-6 ring-1 ring-gray-200/50">
             <p className="font-handwriting text-lg font-bold">Olá,</p>
             <p>
               <span className="mr-1">Meu nome é</span>
@@ -34,7 +34,7 @@ export default function About() {
                   <td className="font-headline font-bold uppercase text-blue-900">
                     Idade:
                   </td>
-                  <td>27</td>
+                  <td className="text-gray-800">28</td>
                 </tr>
                 <tr>
                   <td className="font-headline font-bold uppercase text-blue-900">
@@ -77,7 +77,7 @@ export default function About() {
               </tbody>
             </table>
           </div>
-          <div className="absolute -left-2 -top-4 h-24 w-20 rounded-lg bg-gray-600 bg-[url(https://avatars.githubusercontent.com/u/41848606?v=4)] bg-cover bg-center md:-left-12 md:-top-12 md:h-72 md:w-56"></div>
+          <div className="absolute -left-2 -top-4 h-24 w-24 rounded-2xl bg-gray-600 bg-[url(https://avatars.githubusercontent.com/u/41848606?v=4)] bg-cover bg-center ring-4 ring-white shadow-2xl md:-left-12 md:-top-12 md:h-64 md:w-64 md:rounded-3xl"></div>
         </div>
       </div>
     </section>

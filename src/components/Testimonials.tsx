@@ -2,7 +2,7 @@ import { FaQuoteLeft } from "react-icons/fa";
 
 export default function Testimonials() {
   return (
-    <section className="container mx-auto max-w-4xl p-4 py-8">
+    <section id="linkedin" className="scroll-mt-16 md:scroll-mt-20 container mx-auto max-w-4xl p-4 py-8">
       <div className="relative mb-4 p-4 text-center">
         <h2 className="relative z-50 mb-2 font-bold">
           <span className="font-handwriting text-4xl text-blue-800">

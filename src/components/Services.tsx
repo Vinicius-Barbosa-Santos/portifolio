@@ -25,7 +25,7 @@ export default function Services() {
   ];
 
   return (
-    <section className="container mx-auto my-12 max-w-4xl p-4">
+    <section id="servicos" className="scroll-mt-16 md:scroll-mt-20 container mx-auto my-12 max-w-4xl p-4">
       <div className="p-4 text-center">
         <p className="text-sm font-semibold uppercase text-blue-600">
           O que faço de melhor
@@ -40,15 +40,17 @@ export default function Services() {
         </p>
       </div>
 
-      <div className="mt-6 flex flex-col gap-2 md:flex-row">
+      <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-3">
         {services.map((service, index) => (
           <div
-            className="basis-1/3 rounded-lg bg-blue-700 p-4 text-white"
+            className="group rounded-2xl bg-white p-5 text-gray-900 shadow-sm ring-1 ring-gray-200 transition hover:-translate-y-1 hover:shadow-xl"
             key={`service-${index}`}
           >
-            <div className="mb-2">{service.icon}</div>
-            <h3 className="text-xl font-bold">{service.title}</h3>
-            <p className="text-sm">{service.description}</p>
+            <div className="mb-3 text-blue-700 transition group-hover:text-blue-600">
+              {service.icon}
+            </div>
+            <h3 className="mb-1 text-lg font-bold">{service.title}</h3>
+            <p className="text-sm text-gray-600">{service.description}</p>
           </div>
         ))}
       </div>
