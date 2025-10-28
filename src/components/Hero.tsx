@@ -45,6 +45,15 @@ export default function Hero() {
               >
                 Fale comigo
               </a>
+              <a
+                href="/cv.pdf"
+                target="_blank"
+                className="inline-flex items-center rounded-full bg-white/10 px-5 py-2 font-bold text-white shadow-lg ring-1 ring-white/10 transition hover:bg-white/20 hover:shadow-xl"
+                download
+              >
+                <HiDownload className="mr-2 h-5 w-5" />
+                Baixe meu CV
+              </a>
             </div>
           </div>
 

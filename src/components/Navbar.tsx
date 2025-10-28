@@ -1,17 +1,20 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
     const [active, setActive] = useState("#inicio");
 
-    const links = [
-        { href: "#inicio", label: "Início" },
-        { href: "#servicos", label: "Serviços" },
-        { href: "#projetos", label: "Projetos" },
-        { href: "#sobre", label: "Sobre" },
-        { href: "#skills", label: "Skills" },
-        { href: "#linkedin", label: "Linkedin" },
-    ];
+    const links = useMemo(
+        () => [
+            { href: "#inicio", label: "Início" },
+            { href: "#servicos", label: "Serviços" },
+            { href: "#projetos", label: "Projetos" },
+            { href: "#sobre", label: "Sobre" },
+            { href: "#skills", label: "Skills" },
+            { href: "#linkedin", label: "Linkedin" },
+        ],
+        []
+    );
 
     const handleNavClick = useCallback((e: React.MouseEvent, href: string) => {
         e.preventDefault();
@@ -49,7 +52,7 @@ export default function Navbar() {
 
         sections.forEach((s) => observer.observe(s));
         return () => observer.disconnect();
-    }, []);
+    }, [links]);
 
     return (
         <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-white/60 backdrop-blur-md">
