@@ -1,27 +1,24 @@
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { HiDownload } from "react-icons/hi";
+import { FaGithub } from "react-icons/fa";
 
 export default function Hero() {
   return (
     <>
       <section
         id="inicio"
-        className="scroll-mt-16 md:scroll-mt-20 rounded-br-[80px] bg-gradient-to-tr from-slate-900 to-slate-800 text-white md:rounded-br-[180px]"
+        className="scroll-mt-20 md:scroll-mt-24 rounded-br-[80px] bg-gradient-to-tr from-slate-950 to-slate-900 text-white md:rounded-br-[180px]"
       >
         <div className="container mx-auto flex max-w-4xl flex-col-reverse p-4 py-14 md:flex-row">
           <div className="basis-1/2">
             <h1 className="mb-6 text-center md:text-left">
-              <span className="block font-handwriting text-3xl">
-                Olá, me chamo
-              </span>
-              <span className="mr-2 font-headline text-5xl font-semibold bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+              <span className="block font-handwriting text-3xl text-slate-300">Olá, me chamo</span>
+              <span className="mr-2 font-headline text-5xl font-semibold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Vinicius
               </span>
               <br />
-              <span className="font-headline text-5xl font-light text-blue-300">
-                Barbosa
-              </span>
+              <span className="font-headline text-5xl font-light text-slate-300">Barbosa</span>
             </h1>
 
             <h2 className="mb-6 flex items-center justify-center gap-2 font-semibold md:justify-start">
@@ -29,7 +26,7 @@ export default function Hero() {
               Desenvolvedor React.js Front-end
             </h2>
 
-            <p className="mb-8 text-center text-gray-300 md:text-left">
+            <p className="mb-8 text-center text-slate-300 md:text-left">
               Meu objetivo como desenvolvedor front-end é criar soluções
               inovadoras que impactem positivamente a sociedade. Tenho um
               compromisso firme em ajudar as empresas em que atuo a alcançarem o
@@ -41,18 +38,18 @@ export default function Hero() {
             <div className="flex items-center justify-center gap-3 md:justify-start">
               <a
                 href="https://wa.me/5548992017424"
-                className="inline-flex items-center rounded-full bg-blue-600 px-5 py-2 font-bold text-white shadow-lg ring-1 ring-white/10 transition hover:bg-blue-500 hover:shadow-xl"
+                className="inline-flex items-center rounded-full bg-cyan-600 px-5 py-2 font-bold text-white shadow-lg ring-1 ring-white/10 transition hover:bg-cyan-500 hover:shadow-xl"
               >
                 Fale comigo
               </a>
               <a
-                href="/cv.pdf"
+                href="https://github.com/Vinicius-Barbosa-Santos"
                 target="_blank"
-                className="inline-flex items-center rounded-full bg-white/10 px-5 py-2 font-bold text-white shadow-lg ring-1 ring-white/10 transition hover:bg-white/20 hover:shadow-xl"
+                className="inline-flex gap-2 items-center rounded-full bg-white/10 px-5 py-2 font-bold text-white shadow-lg ring-1 ring-white/10 transition hover:bg-white/20 hover:shadow-xl"
                 download
               >
-                <HiDownload className="mr-2 h-5 w-5" />
-                Baixe meu CV
+                <FaGithub className="h-5 w-5" />
+                GitHub
               </a>
             </div>
           </div>
@@ -64,3 +61,7 @@ export default function Hero() {
     </>
   );
 }
+
+const handleOpenGitHub = () => {
+  window.open("https://github.com/Vinicius-Barbosa-Santos", "_blank", "noopener,noreferrer");
+};

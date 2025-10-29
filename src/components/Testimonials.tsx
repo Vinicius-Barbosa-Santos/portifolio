@@ -2,9 +2,9 @@ import { FaQuoteLeft } from "react-icons/fa";
 
 export default function Testimonials() {
   return (
-    <section id="linkedin" className="scroll-mt-16 md:scroll-mt-20 container mx-auto max-w-4xl p-4 py-8">
+    <section id="linkedin" className="scroll-mt-20 md:scroll-mt-24 container mx-auto max-w-4xl p-4 py-8">
       <div className="relative mb-4 p-4 text-center">
-        <h2 className="relative z-50 mb-2 font-bold">
+        <h2 className="relative mb-2 font-bold">
           <span className="font-handwriting text-4xl text-blue-800">
             Linkedin
           </span>
@@ -14,7 +14,7 @@ export default function Testimonials() {
       <figure>
         <FaQuoteLeft className="h-8 w-8 text-gray-600" />
         <blockquote className="mb-6">
-          <p className="text-2xl text-gray-900">
+          <p className="text-2xl">
             Vinicius é a típica pessoa que surpreende a todos com seu
             conhecimento. Tenho o prazer de recomendá-lo como Desenvolvedor Web
             FullStack. Durante o tempo em que trabalhei com Vinicius, pude

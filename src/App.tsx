@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <main className="pt-16">
+      <main className="pt-20 md:pt-24 bg-slate-950 text-slate-200 min-h-screen">
         <Hero />
         <Services />
         <Projects />

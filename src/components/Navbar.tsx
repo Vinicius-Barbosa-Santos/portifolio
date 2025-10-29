@@ -55,53 +55,47 @@ export default function Navbar() {
     }, [links]);
 
     return (
-        <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-white/60 backdrop-blur-md">
-            <nav className="container mx-auto flex max-w-5xl items-center justify-between p-3">
+        <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-800 bg-slate-900/70 backdrop-blur">
+            <nav className="container mx-auto flex h-16 md:h-20 max-w-5xl items-center justify-between p-3">
                 <a href="#inicio" onClick={(e) => handleNavClick(e, "#inicio")} className="flex items-center gap-2">
-                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 font-bold text-white">
+                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-cyan-600 font-bold text-white">
                         VB
                     </span>
-                    <span className="font-headline text-sm font-semibold text-gray-800">Portfólio</span>
+                    <span className="font-headline text-sm font-semibold text-slate-200">Portfólio</span>
                 </a>
-
                 <button
-                    className="md:hidden rounded-md px-3 py-2 text-sm text-gray-700 ring-1 ring-gray-300"
+                    className="md:hidden rounded-md px-3 py-2 text-sm text-slate-200 ring-1 ring-slate-700"
                     onClick={() => setOpen((v) => !v)}
                     aria-label="Abrir menu"
                 >
                     Menu
                 </button>
-
                 <ul className="hidden items-center gap-4 md:flex">
                     {links.map((link) => (
                         <li key={link.href} className="group">
                             <a
                                 href={link.href}
                                 onClick={(e) => handleNavClick(e, link.href)}
-                                className={`text-sm font-medium transition ${active === link.href ? "text-blue-700" : "text-gray-800 hover:text-blue-700"
-                                    }`}
+                                className={`text-sm font-medium transition ${active === link.href ? "text-cyan-400" : "text-slate-200 hover:text-cyan-300"}`}
                             >
                                 {link.label}
                             </a>
                             <span
-                                className={`block h-0.5 rounded bg-blue-600 transition-all duration-300 ${active === link.href ? "w-full" : "w-0 group-hover:w-full"
-                                    }`}
+                                className={`block h-0.5 rounded bg-cyan-500 transition-all duration-300 ${active === link.href ? "w-full" : "w-0 group-hover:w-full"}`}
                             />
                         </li>
                     ))}
                 </ul>
             </nav>
-
             {open && (
                 <div className="md:hidden">
-                    <ul className="space-y-2 border-t border-white/10 bg-white/70 p-3 backdrop-blur">
+                    <ul className="space-y-2 border-t border-slate-800 bg-slate-900/80 p-3 backdrop-blur">
                         {links.map((link) => (
                             <li key={`m-${link.href}`}>
                                 <a
                                     href={link.href}
                                     onClick={(e) => handleNavClick(e, link.href)}
-                                    className={`block rounded-md px-3 py-2 text-sm font-medium transition ${active === link.href ? "text-blue-700" : "text-gray-800 hover:bg-white"
-                                        }`}
+                                    className={`block rounded-md px-3 py-2 text-sm font-medium transition ${active === link.href ? "text-cyan-400" : "text-slate-200 hover:bg-slate-800/50"}`}
                                 >
                                     {link.label}
                                 </a>
