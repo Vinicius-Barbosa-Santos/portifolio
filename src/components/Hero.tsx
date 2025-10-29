@@ -1,6 +1,3 @@
-/* eslint-disable react/jsx-no-target-blank */
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import { HiDownload } from "react-icons/hi";
 import { FaGithub } from "react-icons/fa";
 
 export default function Hero() {
@@ -46,7 +43,7 @@ export default function Hero() {
                 href="https://github.com/Vinicius-Barbosa-Santos"
                 target="_blank"
                 className="inline-flex gap-2 items-center rounded-full bg-white/10 px-5 py-2 font-bold text-white shadow-lg ring-1 ring-white/10 transition hover:bg-white/20 hover:shadow-xl"
-                download
+                download rel="noreferrer"
               >
                 <FaGithub className="h-5 w-5" />
                 GitHub
@@ -61,7 +58,3 @@ export default function Hero() {
     </>
   );
 }
-
-const handleOpenGitHub = () => {
-  window.open("https://github.com/Vinicius-Barbosa-Santos", "_blank", "noopener,noreferrer");
-};
