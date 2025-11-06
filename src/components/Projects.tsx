@@ -34,16 +34,16 @@ export default function Projects() {
       image:
         "https://plus.unsplash.com/premium_photo-1754236809656-827f3d359e6c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2940",
       link: "https://memory-dev.netlify.app/",
-      github: "https://github.com/Vinicius-Barbosa-Santos/react_jogo_da_memoria", // substitua pelo repo do projeto
+      github:
+        "https://github.com/Vinicius-Barbosa-Santos/react_jogo_da_memoria", // substitua pelo repo do projeto
       colSpan: "col-span-1",
     },
     {
-      title: "Projeto E-commerce",
-      description: "Em desenvolvimento",
+      title: "Projeto IFood",
       image:
         "https://plus.unsplash.com/premium_photo-1675252369719-dd52bc69c3df?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1287",
-      link: "https://food-ecommerce-dev.netlify.app/",
-      github: "https://github.com/Vinicius-Barbosa-Santos/food-commerce-dev", // substitua pelo repo do projeto
+      link: "https://fws-foods.netlify.app/",
+      github: "https://github.com/Vinicius-Barbosa-Santos/fsw-foods", // substitua pelo repo do projeto
       colSpan: "col-span-1",
     },
     {
