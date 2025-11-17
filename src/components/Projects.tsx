@@ -1,7 +1,28 @@
 /* eslint-disable react/jsx-no-target-blank */
 import { useState } from "react";
-import { HiArrowTopRightOnSquare } from "react-icons/hi2";
+import { motion } from "framer-motion";
+import {
+  HiArrowTopRightOnSquare,
+  HiShieldCheck,
+  HiSparkles,
+} from "react-icons/hi2";
 import Modal from "./Modal";
+import {
+  SiReact,
+  SiTypescript,
+  SiTailwindcss,
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
+  SiStyledcomponents,
+  SiNodedotjs,
+  SiNextdotjs,
+  SiPrisma,
+  SiPostgresql,
+  SiVercel,
+  SiVite,
+  SiGoogle,
+} from "react-icons/si";
 
 export default function Projects() {
   type Project = {
@@ -11,6 +32,7 @@ export default function Projects() {
     github?: string;
     colSpan: string;
     description?: string;
+    stacks?: string[];
   };
 
   const projects: Project[] = [
@@ -21,6 +43,7 @@ export default function Projects() {
       link: "https://rocketnotes-dev.netlify.app/",
       github: "https://github.com/Vinicius-Barbosa-Santos/rocketseat-notes", // substitua pelo repo do projeto
       colSpan: "col-span-1",
+      stacks: ["React", "TypeScript", "Styled Components", "Node JS"],
     },
     {
       title: "Electrolux",
@@ -45,6 +68,16 @@ export default function Projects() {
       link: "https://fws-foods.netlify.app/",
       github: "https://github.com/Vinicius-Barbosa-Santos/fsw-foods", // substitua pelo repo do projeto
       colSpan: "col-span-1",
+      stacks: [
+        "Next.js 14 (App Router)",
+        "React 18",
+        "Tailwind CSS",
+        "Shadcn",
+        "Prisma ORM",
+        "PostgreSQL",
+        "NextAuth (Google)",
+        "Vercel",
+      ],
     },
     {
       title: "Projeto Watch Me",
@@ -53,10 +86,47 @@ export default function Projects() {
       link: "https://watch-me-vinicius.netlify.app/",
       github: "https://github.com/Vinicius-Barbosa-Santos/watch-me", // substitua pelo repo do projeto
       colSpan: "col-span-1",
+      stacks: ["React 18", "TypeScript", "Vite", "Tailwind CSS"],
     },
   ];
 
   const [selected, setSelected] = useState<Project | null>(null);
+
+  const getIcon = (name: string): JSX.Element | null => {
+    const s = name.toLowerCase();
+    if (s.includes("react"))
+      return <SiReact className="h-4 w-4 text-cyan-400" />;
+    if (s.includes("typescript"))
+      return <SiTypescript className="h-4 w-4 text-blue-400" />;
+    if (s.includes("tailwind"))
+      return <SiTailwindcss className="h-4 w-4 text-cyan-300" />;
+    if (s.includes("javascript"))
+      return <SiJavascript className="h-4 w-4 text-yellow-400" />;
+    if (s.includes("html"))
+      return <SiHtml5 className="h-4 w-4 text-orange-500" />;
+    if (s.includes("css")) return <SiCss3 className="h-4 w-4 text-blue-500" />;
+    if (s.includes("styled"))
+      return <SiStyledcomponents className="h-4 w-4 text-pink-400" />;
+    if (s.includes("node"))
+      return <SiNodedotjs className="h-4 w-4 text-green-500" />;
+    if (s.includes("next"))
+      return <SiNextdotjs className="h-4 w-4 text-white" />;
+    if (s.includes("shadcn"))
+      return <HiSparkles className="h-4 w-4 text-white" />;
+    if (s.includes("prisma"))
+      return <SiPrisma className="h-4 w-4 text-emerald-400" />;
+    if (s.includes("postgres"))
+      return <SiPostgresql className="h-4 w-4 text-sky-500" />;
+    if (s.includes("vercel"))
+      return <SiVercel className="h-4 w-4 text-white" />;
+    if (s.includes("vite"))
+      return <SiVite className="h-4 w-4 text-purple-400" />;
+    if (s.includes("nextauth"))
+      return <HiShieldCheck className="h-4 w-4 text-white" />;
+    if (s.includes("google"))
+      return <SiGoogle className="h-4 w-4 text-red-500" />;
+    return null;
+  };
 
   return (
     <>
@@ -81,9 +151,17 @@ export default function Projects() {
 
           <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
             {projects.map((project, index) => (
-              <div
+              <motion.div
                 key={index}
                 onClick={() => setSelected(project)}
+                initial={{ opacity: 0, y: 14 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{
+                  duration: 0.6,
+                  ease: "easeOut",
+                  delay: index * 0.12,
+                }}
                 className={`group relative h-52 cursor-pointer rounded-lg ${project.colSpan} bg-cover bg-center`}
                 style={{ backgroundImage: `url('${project.image}')` }}
                 aria-label={`Abrir opções para ${project.title}`}
@@ -98,7 +176,7 @@ export default function Projects() {
                     <span>Ver opções</span>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -139,6 +217,19 @@ export default function Projects() {
           {selected.description && (
             <p className="text-sm text-white/80">{selected.description}</p>
           )}
+          {selected?.stacks?.length ? (
+            <div className="mt-3 flex flex-wrap gap-2">
+              {selected.stacks.map((s, i) => (
+                <span
+                  key={i}
+                  className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs ring-1 ring-white/10"
+                >
+                  {getIcon(s)}
+                  <span className="font-medium">{s}</span>
+                </span>
+              ))}
+            </div>
+          ) : null}
         </Modal>
       )}
 

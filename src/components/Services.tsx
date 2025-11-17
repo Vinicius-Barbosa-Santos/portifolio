@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import {
   HiCommandLine,
   HiComputerDesktop,
@@ -25,27 +26,43 @@ export default function Services() {
   ];
 
   return (
-    <section id="servicos" className="scroll-mt-16 md:scroll-mt-20 container mx-auto my-12 max-w-4xl p-4">
+    <section
+      id="servicos"
+      className="scroll-mt-16 md:scroll-mt-20 container mx-auto my-12 max-w-4xl p-4"
+    >
       <div className="p-4 text-center">
-        <p className="text-sm font-semibold uppercase text-cyan-400">O que faço de melhor</p>
+        <p className="text-sm font-semibold uppercase text-cyan-400">
+          O que faço de melhor
+        </p>
         <h2 className="mb-2 font-bold">
-          <span className="mr-2 font-headline text-3xl bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Meus</span>
-          <span className="font-handwriting text-4xl text-cyan-300">Serviços</span>
+          <span className="mr-2 font-headline text-3xl bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            Meus
+          </span>
+          <span className="font-handwriting text-4xl text-cyan-300">
+            Serviços
+          </span>
         </h2>
         <p className="text-sm text-slate-400">
-          Posso atender uma gama completa de serviços, do front-end ao back-end com banco de dados e sistemas.
+          Posso atender uma gama completa de serviços, do front-end ao back-end
+          com banco de dados e sistemas.
         </p>
       </div>
       <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-3">
         {services.map((service, index) => (
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.12 }}
             className="group rounded-2xl bg-white/5 p-5 text-slate-200 shadow-sm ring-1 ring-white/10 transition hover:-translate-y-1 hover:bg-white/10 hover:shadow-xl"
             key={`service-${index}`}
           >
-            <div className="mb-3 text-cyan-400 transition group-hover:text-cyan-300">{service.icon}</div>
+            <div className="mb-3 text-cyan-400 transition group-hover:text-cyan-300">
+              {service.icon}
+            </div>
             <h3 className="mb-1 text-lg font-bold">{service.title}</h3>
             <p className="text-sm text-slate-400">{service.description}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
