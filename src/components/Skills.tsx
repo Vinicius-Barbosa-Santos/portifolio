@@ -6,6 +6,7 @@ import {
   SiVite,
   SiGit,
   SiVitest,
+  SiMui,
 } from "react-icons/si";
 
 export default function Skills() {
@@ -44,6 +45,11 @@ export default function Skills() {
       level: 90,
     },
     {
+      name: "Material UI",
+      iconNode: <SiMui className="h-10 w-10 text-indigo-400" />,
+      level: 85,
+    },
+    {
       name: "Vite",
       iconNode: <SiVite className="h-10 w-10 text-purple-400" />,
       level: 80,
@@ -74,7 +80,9 @@ export default function Skills() {
             <span className="font-handwriting text-4xl text-white">Skills</span>
           </h2>
           <p className="relative text-sm text-white">
-            Front-end Developer | React.js | TypeScript | JavaScript
+            React.js (Hooks, Context, componentização, Atomic Design),
+            TypeScript, Next.js, Node.js, Tailwind CSS, Material UI, integração
+            com APIs REST, testes e performance.
           </p>
           <div className="absolute left-1/2 top-3 z-0 h-10 w-10 rounded-lg bg-cyan-400/10" />
         </div>

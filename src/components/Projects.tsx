@@ -44,6 +44,7 @@ export default function Projects() {
       github: "https://github.com/Vinicius-Barbosa-Santos/rocketseat-notes", // substitua pelo repo do projeto
       colSpan: "col-span-1",
       stacks: ["React", "TypeScript", "Styled Components", "Node JS"],
+      description: "Aplicação completa com CRUD e integração com API.",
     },
     {
       title: "Electrolux",
@@ -51,6 +52,8 @@ export default function Projects() {
         "http://t0.gstatic.com/images?q=tbn:ANd9GcT5fJ_k7UpD4N2VyYNHqO_5EiLrmwVJgP6WR5i1V-zwJOMB9FIjxHJFDcjsy6xzmw",
       link: "https://storage.googleapis.com/bucket-testehtml8978/production/electrolux/45740/v4/IQ8WS/index.html",
       colSpan: "col-span-1 md:col-span-2",
+      description:
+        "Landing pages e componentes reutilizáveis, otimizados para performance.",
     },
     {
       title: "Projeto Jogo da Memória",
@@ -60,9 +63,10 @@ export default function Projects() {
       github:
         "https://github.com/Vinicius-Barbosa-Santos/react_jogo_da_memoria", // substitua pelo repo do projeto
       colSpan: "col-span-1",
+      description: "Foco em lógica, estado e reutilização de componentes.",
     },
     {
-      title: "Projeto IFood",
+      title: "Projeto iFood",
       image:
         "https://plus.unsplash.com/premium_photo-1675252369719-dd52bc69c3df?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1287",
       link: "https://fws-foods.netlify.app/",
@@ -78,15 +82,17 @@ export default function Projects() {
         "NextAuth (Google)",
         "Vercel",
       ],
+      description: "Interface e fluxo completo inspirado no app original.",
     },
     {
-      title: "Projeto Watch Me",
+      title: "WatchMe",
       image:
         "https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=500&q=60",
       link: "https://watch-me-vinicius.netlify.app/",
       github: "https://github.com/Vinicius-Barbosa-Santos/watch-me", // substitua pelo repo do projeto
       colSpan: "col-span-1",
       stacks: ["React 18", "TypeScript", "Vite", "Tailwind CSS"],
+      description: "Aplicação com consumo de API e organização modular.",
     },
   ];
 
@@ -143,8 +149,9 @@ export default function Projects() {
               <span className="font-handwriting text-4xl">Portfólio</span>
             </h2>
             <p className="relative text-sm text-gray-400">
-              Alguns dos projetos pessoais e que já realizei ao longo da minha
-              trajetória como programador front-end.
+              Alguns projetos pessoais e profissionais que demonstram minha
+              experiência em React, TypeScript, componentização, integração com
+              APIs e arquitetura front-end.
             </p>
             <div className="absolute left-1/2 top-3 z-0 h-10 w-10 rounded-lg bg-blue-400/10" />
           </div>
@@ -162,7 +169,7 @@ export default function Projects() {
                   ease: "easeOut",
                   delay: index * 0.12,
                 }}
-                className={`group relative h-52 cursor-pointer rounded-lg ${project.colSpan} bg-cover bg-center`}
+                className={`group relative text-center h-52 cursor-pointer rounded-lg ${project.colSpan} bg-cover bg-center`}
                 style={{ backgroundImage: `url('${project.image}')` }}
                 aria-label={`Abrir opções para ${project.title}`}
               >

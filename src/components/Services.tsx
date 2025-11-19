@@ -8,19 +8,21 @@ import {
 export default function Services() {
   const services = [
     {
-      title: "Web",
+      title: "Desenvolvimento Web",
       description:
-        "Desenvolvimento de sites e sistemas web estáticos e dinâmicos com React.js, Typescript, HTML5 e CSS3.",
+        "Criação de interfaces modernas e performáticas usando React.js, TypeScript, HTML5, CSS3, Tailwind e Material UI, seguindo padrões de componentização e Design System.",
       icon: <HiComputerDesktop className="h-12 w-12" />,
     },
     {
       title: "Sistemas",
-      description: "Desenvolvimento de sistemas e APIs REST com Node.js.",
+      description:
+        "Integração e desenvolvimento de funcionalidades conectadas a APIs REST, atuando próximo ao backend para garantir eficiência, qualidade e escalabilidade.",
       icon: <HiCommandLine className="h-12 w-12" />,
     },
     {
       title: "Mobile",
-      description: "Desenvolvimento de aplicativos Android e iOS.",
+      description:
+        "Desenvolvimento de aplicativos Android e iOS com React Native, mantendo o mesmo padrão de componentização e qualidade visual.",
       icon: <HiDevicePhoneMobile className="h-12 w-12" />,
     },
   ];

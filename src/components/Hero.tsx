@@ -36,11 +36,12 @@ export default function Hero() {
             </h2>
 
             <p className="mb-8 text-center text-slate-300 md:text-left">
-              Desenvolvedor React Pleno com foco em interfaces escaláveis e de
-              alta qualidade usando React 18, TypeScript e Next.js. Experiência
-              em componentização, acessibilidade, performance, testes e boas
-              práticas de UI. Entrego produtos com previsibilidade, atenção ao
-              detalhe e impacto no negócio.
+              Desenvolvedor React Pleno com experiência sólida na construção de
+              interfaces escaláveis e bem estruturadas utilizando React,
+              TypeScript, Next.js e Design Systems. Atuo com componentização,
+              Atomic Design, consumo de APIs REST, acessibilidade, performance e
+              boas práticas de UI/UX. Foco em entrega consistente, código limpo
+              e colaboração direta com produto, QA e backend.
             </p>
 
             <div className="flex flex-wrap md:flex-nowrap items-center justify-center md:justify-start gap-3 w-full">
