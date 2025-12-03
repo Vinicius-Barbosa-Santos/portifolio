@@ -1,6 +1,7 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import Shuffle from "./Shuffle";
 import {
   SiReact,
   SiTypescript,
@@ -10,15 +11,9 @@ import {
 } from "react-icons/si";
 
 export default function Hero() {
-  const [greet, setGreet] = useState("");
-  const [first, setFirst] = useState("");
-  const [last, setLast] = useState("");
   const [roleTitle, setRoleTitle] = useState("");
   const [roleDesc, setRoleDesc] = useState("");
 
-  const T_GREETING = "Olá, me chamo";
-  const T_FIRST = "Vinicius";
-  const T_LAST = "Barbosa";
   const T_ROLE = "Desenvolvedor React Pleno";
   const T_DESC =
     "Desenvolvedor React Pleno com experiência sólida na construção de interfaces escaláveis e bem estruturadas utilizando React, TypeScript, Next.js e Design Systems. Atuo com componentização, Atomic Design, consumo de APIs REST, acessibilidade, performance e boas práticas de UI/UX. Foco em entrega consistente, código limpo e colaboração direta com produto, QA e backend.";
@@ -39,19 +34,7 @@ export default function Hero() {
       timeouts.push(startId);
     };
 
-    type(T_GREETING, setGreet, 0);
-    type(T_FIRST, setFirst, T_GREETING.length * speed + 400);
-    type(
-      T_LAST,
-      setLast,
-      T_GREETING.length * speed + T_FIRST.length * speed + 800
-    );
-
-    const roleStart =
-      T_GREETING.length * speed +
-      T_FIRST.length * speed +
-      T_LAST.length * speed +
-      1200;
+    const roleStart = 1600;
     type(T_ROLE, setRoleTitle, roleStart);
     type(T_DESC, setRoleDesc, roleStart + T_ROLE.length * speed + 400);
 
@@ -68,31 +51,34 @@ export default function Hero() {
         <div className="container mx-auto flex max-w-4xl flex-col-reverse p-4 py-14 md:flex-row">
           <div className="basis-1/2">
             <h1 className="mb-6 text-center md:text-left">
-              <span className="block relative">
-                <span className="font-handwriting text-3xl text-slate-300 opacity-0 select-none">
-                  {T_GREETING}
-                </span>
-                <span className="absolute inset-0 font-handwriting text-3xl text-slate-300">
-                  {greet}
-                </span>
-              </span>
-              <span className="mr-2 relative inline-block">
-                <span className="font-headline text-5xl font-semibold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent opacity-0 select-none">
-                  {T_FIRST}
-                </span>
-                <span className="absolute inset-0 font-headline text-5xl font-semibold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                  {first}
-                </span>
-              </span>
+              <Shuffle
+                text="Olá, me chamo"
+                tag="span"
+                className="block font-handwriting text-3xl text-slate-300 normal-case"
+                shuffleDirection="right"
+                threshold={0.2}
+                rootMargin="-60px"
+                triggerOnce
+              />
+              <Shuffle
+                text="Vinicius"
+                tag="span"
+                className="mr-2 inline-block font-headline text-5xl font-semibold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent normal-case"
+                shuffleDirection="right"
+                threshold={0.2}
+                rootMargin="-60px"
+                triggerOnce
+              />
               <br />
-              <span className="relative inline-block">
-                <span className="font-headline text-5xl font-light text-slate-300 opacity-0 select-none">
-                  {T_LAST}
-                </span>
-                <span className="absolute inset-0 font-headline text-5xl font-light text-slate-300">
-                  {last}
-                </span>
-              </span>
+              <Shuffle
+                text="Barbosa"
+                tag="span"
+                className="inline-block font-headline text-5xl font-light text-slate-300 normal-case"
+                shuffleDirection="right"
+                threshold={0.2}
+                rootMargin="-60px"
+                triggerOnce
+              />
             </h1>
 
             <h2 className="mb-6 flex items-center justify-center gap-2 font-semibold md:justify-start">
