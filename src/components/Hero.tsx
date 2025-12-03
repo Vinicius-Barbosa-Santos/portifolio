@@ -60,10 +60,11 @@ export default function Hero() {
                 rootMargin="-60px"
                 triggerOnce
               />
+              <br />
               <Shuffle
-                text="Vinicius"
+                text="Vinícius"
                 tag="span"
-                className="mr-2 inline-block font-headline text-5xl font-semibold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent normal-case"
+                className="inline-block font-headline text-5xl font-light text-slate-300 normal-case"
                 shuffleDirection="right"
                 threshold={0.2}
                 rootMargin="-60px"
