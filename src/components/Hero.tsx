@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import {
   SiReact,
   SiTypescript,
@@ -9,6 +10,55 @@ import {
 } from "react-icons/si";
 
 export default function Hero() {
+  const [greet, setGreet] = useState("");
+  const [first, setFirst] = useState("");
+  const [last, setLast] = useState("");
+  const [roleTitle, setRoleTitle] = useState("");
+  const [roleDesc, setRoleDesc] = useState("");
+
+  const T_GREETING = "Olá, me chamo";
+  const T_FIRST = "Vinicius";
+  const T_LAST = "Barbosa";
+  const T_ROLE = "Desenvolvedor React Pleno";
+  const T_DESC =
+    "Desenvolvedor React Pleno com experiência sólida na construção de interfaces escaláveis e bem estruturadas utilizando React, TypeScript, Next.js e Design Systems. Atuo com componentização, Atomic Design, consumo de APIs REST, acessibilidade, performance e boas práticas de UI/UX. Foco em entrega consistente, código limpo e colaboração direta com produto, QA e backend.";
+
+  useEffect(() => {
+    const speed = 60;
+    const timeouts: number[] = [];
+    const type = (text: string, set: (s: string) => void, delay: number) => {
+      let i = 0;
+      const startId = window.setTimeout(function run() {
+        set(text.slice(0, i + 1));
+        i += 1;
+        if (i <= text.length) {
+          const id = window.setTimeout(run, speed);
+          timeouts.push(id);
+        }
+      }, delay);
+      timeouts.push(startId);
+    };
+
+    type(T_GREETING, setGreet, 0);
+    type(T_FIRST, setFirst, T_GREETING.length * speed + 400);
+    type(
+      T_LAST,
+      setLast,
+      T_GREETING.length * speed + T_FIRST.length * speed + 800
+    );
+
+    const roleStart =
+      T_GREETING.length * speed +
+      T_FIRST.length * speed +
+      T_LAST.length * speed +
+      1200;
+    type(T_ROLE, setRoleTitle, roleStart);
+    type(T_DESC, setRoleDesc, roleStart + T_ROLE.length * speed + 400);
+
+    return () => {
+      timeouts.forEach((id) => clearTimeout(id));
+    };
+  }, []);
   return (
     <>
       <section
@@ -18,30 +68,46 @@ export default function Hero() {
         <div className="container mx-auto flex max-w-4xl flex-col-reverse p-4 py-14 md:flex-row">
           <div className="basis-1/2">
             <h1 className="mb-6 text-center md:text-left">
-              <span className="block font-handwriting text-3xl text-slate-300">
-                Olá, me chamo
+              <span className="block relative">
+                <span className="font-handwriting text-3xl text-slate-300 opacity-0 select-none">
+                  {T_GREETING}
+                </span>
+                <span className="absolute inset-0 font-handwriting text-3xl text-slate-300">
+                  {greet}
+                </span>
               </span>
-              <span className="mr-2 font-headline text-5xl font-semibold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Vinicius
+              <span className="mr-2 relative inline-block">
+                <span className="font-headline text-5xl font-semibold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent opacity-0 select-none">
+                  {T_FIRST}
+                </span>
+                <span className="absolute inset-0 font-headline text-5xl font-semibold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                  {first}
+                </span>
               </span>
               <br />
-              <span className="font-headline text-5xl font-light text-slate-300">
-                Barbosa
+              <span className="relative inline-block">
+                <span className="font-headline text-5xl font-light text-slate-300 opacity-0 select-none">
+                  {T_LAST}
+                </span>
+                <span className="absolute inset-0 font-headline text-5xl font-light text-slate-300">
+                  {last}
+                </span>
               </span>
             </h1>
 
             <h2 className="mb-6 flex items-center justify-center gap-2 font-semibold md:justify-start">
               <div className="h-1 w-12 rounded-full bg-blue-500" />
-              Desenvolvedor React Pleno
+              <span className="relative inline-block">
+                <span className="opacity-0 select-none">{T_ROLE}</span>
+                <span className="absolute inset-0">{roleTitle}</span>
+              </span>
             </h2>
 
             <p className="mb-8 text-center text-slate-300 md:text-left">
-              Desenvolvedor React Pleno com experiência sólida na construção de
-              interfaces escaláveis e bem estruturadas utilizando React,
-              TypeScript, Next.js e Design Systems. Atuo com componentização,
-              Atomic Design, consumo de APIs REST, acessibilidade, performance e
-              boas práticas de UI/UX. Foco em entrega consistente, código limpo
-              e colaboração direta com produto, QA e backend.
+              <span className="relative block">
+                <span className="opacity-0 select-none">{T_DESC}</span>
+                <span className="absolute inset-0">{roleDesc}</span>
+              </span>
             </p>
 
             <div className="flex flex-wrap md:flex-nowrap items-center justify-center md:justify-start gap-3 w-full">
