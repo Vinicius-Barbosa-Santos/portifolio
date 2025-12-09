@@ -83,7 +83,14 @@ export default function Hero() {
             </h1>
 
             <h2 className="mb-6 flex items-center justify-center gap-2 font-semibold md:justify-start">
-              <div className="h-1 w-12 rounded-full bg-blue-500" />
+              <motion.div
+                className="h-1 w-12 rounded-full bg-blue-500"
+                initial={{ scaleX: 0, opacity: 0 }}
+                whileInView={{ scaleX: 1, opacity: 1 }}
+                viewport={{ once: true, amount: 0.6 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                style={{ transformOrigin: "left" }}
+              />
               <span className="relative inline-block">
                 <span className="opacity-0 select-none">{T_ROLE}</span>
                 <span className="absolute inset-0">{roleTitle}</span>
@@ -153,8 +160,14 @@ export default function Hero() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
+                animate={{ y: [0, -8, 0] }}
                 viewport={{ once: true, amount: 0.4 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
+                transition={{
+                  opacity: { duration: 0.6, ease: "easeOut" },
+                  scale: { duration: 0.6, ease: "easeOut" },
+                  y: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+                }}
+                whileHover={{ scale: 1.03 }}
                 className="relative h-56 w-56 md:h-80 md:w-80 rounded-3xl ring-4 ring-white/10 shadow-2xl bg-cover bg-center brightness-75 saturate-75"
                 style={{
                   backgroundImage:
@@ -164,6 +177,16 @@ export default function Hero() {
                 <div className="absolute inset-0 rounded-3xl bg-black/40" />
               </motion.div>
               <motion.span
+                initial={{ opacity: 0.6 }}
+                animate={{ rotate: 360, opacity: [0.6, 0.9, 0.6] }}
+                transition={{
+                  rotate: { duration: 30, repeat: Infinity, ease: "linear" },
+                  opacity: { duration: 3, repeat: Infinity },
+                }}
+                className="absolute -inset-8 rounded-[2.5rem] ring-2 ring-cyan-400/10"
+                aria-hidden="true"
+              />
+              <motion.span
                 initial={{ opacity: 0.8 }}
                 animate={{ opacity: [0.6, 0.9, 0.6] }}
                 transition={{ duration: 3, repeat: Infinity }}
@@ -171,55 +194,114 @@ export default function Hero() {
                 aria-hidden="true"
               />
               <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.6 }}
-                className="absolute -top-6 left-0 hidden md:inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm ring-1 ring-white/20"
+                className="absolute inset-0 origin-center"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 18, ease: "linear", repeat: Infinity }}
+                aria-hidden="true"
               >
-                <SiReact className="h-4 w-4 text-cyan-400" />
-                React
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, x: 12 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.5, duration: 0.6 }}
-                className="absolute top-10 -right-6 hidden md:inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm ring-1 ring-white/20"
-              >
-                <SiTypescript className="h-4 w-4 text-blue-400" />
-                TypeScript
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7, duration: 0.6 }}
-                className="absolute -bottom-6 left-6 hidden md:inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm ring-1 ring-white/20"
-              >
-                <SiTailwindcss className="h-4 w-4 text-cyan-300" />
-                Tailwind
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, x: -12 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.9, duration: 0.6 }}
-                className="absolute bottom-10 -right-8 hidden md:inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm ring-1 ring-white/20"
-              >
-                <SiNextdotjs className="h-4 w-4 text-white" />
-                Next.js
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.1, duration: 0.6 }}
-                className="absolute top-1/2 -left-10 hidden md:inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm ring-1 ring-white/20"
-              >
-                <SiNodedotjs className="h-4 w-4 text-green-500" />
-                Node.js
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  animate={{ rotate: -360, scale: [1, 1.06, 1] }}
+                  transition={{
+                    opacity: { delay: 0.3, duration: 0.6 },
+                    rotate: { duration: 18, ease: "linear", repeat: Infinity },
+                    scale: {
+                      duration: 2.6,
+                      ease: "easeInOut",
+                      repeat: Infinity,
+                    },
+                  }}
+                  className="absolute -top-6 left-0 hidden md:inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm ring-1 ring-white/20"
+                >
+                  <SiReact className="h-4 w-4 text-cyan-400" />
+                  React
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: 12 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  animate={{ rotate: -360, scale: [1, 1.07, 1] }}
+                  transition={{
+                    opacity: { delay: 0.5, duration: 0.6 },
+                    rotate: { duration: 18, ease: "linear", repeat: Infinity },
+                    scale: {
+                      duration: 2.8,
+                      ease: "easeInOut",
+                      repeat: Infinity,
+                    },
+                  }}
+                  className="absolute top-10 -right-6 hidden md:inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm ring-1 ring-white/20"
+                >
+                  <SiTypescript className="h-4 w-4 text-blue-400" />
+                  TypeScript
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  animate={{ rotate: -360, scale: [1, 1.05, 1] }}
+                  transition={{
+                    opacity: { delay: 0.7, duration: 0.6 },
+                    rotate: { duration: 18, ease: "linear", repeat: Infinity },
+                    scale: {
+                      duration: 2.4,
+                      ease: "easeInOut",
+                      repeat: Infinity,
+                    },
+                  }}
+                  className="absolute -bottom-6 left-6 hidden md:inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm ring-1 ring-white/20"
+                >
+                  <SiTailwindcss className="h-4 w-4 text-cyan-300" />
+                  Tailwind
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: -12 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  animate={{ rotate: -360, scale: [1, 1.08, 1] }}
+                  transition={{
+                    opacity: { delay: 0.9, duration: 0.6 },
+                    rotate: { duration: 18, ease: "linear", repeat: Infinity },
+                    scale: {
+                      duration: 3.0,
+                      ease: "easeInOut",
+                      repeat: Infinity,
+                    },
+                  }}
+                  className="absolute bottom-10 -right-8 hidden md:inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm ring-1 ring-white/20"
+                >
+                  <SiNextdotjs className="h-4 w-4 text-white" />
+                  Next.js
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  animate={{ rotate: -360, scale: [1, 1.06, 1] }}
+                  transition={{
+                    opacity: { delay: 1.1, duration: 0.6 },
+                    rotate: { duration: 18, ease: "linear", repeat: Infinity },
+                    scale: {
+                      duration: 2.7,
+                      ease: "easeInOut",
+                      repeat: Infinity,
+                    },
+                  }}
+                  className="absolute top-1/2 -left-10 hidden md:inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm ring-1 ring-white/20"
+                >
+                  <SiNodedotjs className="h-4 w-4 text-green-500" />
+                  Node.js
+                </motion.div>
               </motion.div>
             </div>
           </div>
         </div>
       </section>
-      <div className="absolute left-0 -mt-2 h-3 w-1/4 rounded-r-full bg-gradient-to-r from-blue-700 to-blue-600 md:w-1/3" />
+      <motion.div
+        className="absolute left-0 -mt-2 h-3 w-1/4 rounded-r-full bg-gradient-to-r from-blue-700 to-blue-600 md:w-1/3"
+        initial={{ scaleX: 0, opacity: 0 }}
+        whileInView={{ scaleX: 1, opacity: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        style={{ transformOrigin: "left" }}
+      />
     </>
   );
 }
