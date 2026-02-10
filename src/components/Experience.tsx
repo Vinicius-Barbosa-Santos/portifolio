@@ -5,40 +5,9 @@ import { FaLinkedin, FaWhatsapp } from "react-icons/fa";
 export default function Experience() {
   const experiences = [
     {
-      role: "Desenvolvedor Frontend",
-      company: "Freelance",
-      period: "2022 — Atual",
-      summary:
-        "Desenvolvimento de um site completo para imobiliária, com catálogo de imóveis, filtros avançados, busca por localização, página detalhada do imóvel, galeria de fotos e integração com WhatsApp para contato rápido. O sistema conta com painel administrativo para cadastro e gerenciamento de imóveis, autenticação, upload de imagens e organização por categorias. O frontend foi construído com React/Next.js, garantindo performance, SEO e responsividade. O backend utiliza Node.js e PostgreSQL para armazenar dados de forma segura e escalável. Todo o projeto inclui design no Figma, componentes reutilizáveis, otimização de carregamento e deploy configurado com CI/CD.",
-      tags: [
-        "React",
-        "Next.js",
-        "TypeScript",
-        "JavaScript",
-        "Node.js",
-        "Express",
-        "PostgreSQL",
-        "Prisma",
-        "API REST",
-        "Autenticação JWT",
-        "Upload de Imagens",
-        "Tailwind CSS",
-        "CSS Modules",
-        "Styled Components",
-        "Axios",
-        "React Hook Form",
-        "Git",
-        "GitHub",
-        "CI/CD",
-        "Vercel",
-        "Figma",
-        "Integrações Externas",
-      ],
-    },
-    {
       role: "Front-end",
       company: "Arizona",
-      period: "2021 — Atual",
+      period: "2021 — Feb 2026",
       summary:
         "Atuação em projetos de alta visibilidade para Bradesco, Vivo, XP, Natura, Electrolux e Grupo Pão de Açúcar, incluindo criação de landing pages, componentes reutilizáveis e páginas de alto tráfego. Migração e otimização da revista digital do GPA, com foco em performance e melhoria do fluxo entre React e a camada de front-end. Experiência em componentização, design systems, acessibilidade, SEO, consumo de APIs e integração com squads multidisciplinares.",
       tags: ["HTML", "CSS", "Javascript", "React"],
