@@ -21,8 +21,8 @@ export default function About() {
         <div className="relative flex flex-col items-center gap-8 md:flex-row md:items-start md:gap-12">
           {/* Avatar com brilho */}
           <div className="relative shrink-0">
-            <div className="absolute -inset-4 -z-10 rounded-3xl bg-cyan-500/20 blur-2xl" />
-            <div className="h-64 w-64 rounded-3xl bg-[url(https://avatars.githubusercontent.com/u/41848606?v=4)] bg-cover bg-center ring-4 ring-white/20 shadow-2xl md:h-72 md:w-72" />
+            <div className="absolute -inset-4 -z-10 rounded-full bg-cyan-500/20 blur-2xl" />
+            <div className="h-64 w-64 rounded-full bg-[url(https://avatars.githubusercontent.com/u/41848606?v=4)] bg-cover bg-center ring-4 ring-white/20 shadow-2xl md:h-72 md:w-72" />
           </div>
 
           {/* Cartão glass com informações */}

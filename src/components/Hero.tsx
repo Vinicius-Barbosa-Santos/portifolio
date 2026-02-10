@@ -168,13 +168,13 @@ export default function Hero() {
                   y: { duration: 4, repeat: Infinity, ease: "easeInOut" },
                 }}
                 whileHover={{ scale: 1.03 }}
-                className="relative h-56 w-56 md:h-80 md:w-80 rounded-3xl ring-4 ring-white/10 shadow-2xl bg-cover bg-center brightness-75 saturate-75"
+                className="relative h-56 w-56 md:h-80 md:w-80 rounded-full ring-4 ring-white/10 shadow-2xl bg-cover bg-center brightness-75 saturate-75"
                 style={{
                   backgroundImage:
                     "url('https://avatars.githubusercontent.com/u/41848606?v=4')",
                 }}
               >
-                <div className="absolute inset-0 rounded-3xl bg-black/40" />
+                <div className="absolute inset-0 rounded-full bg-black/40" />
               </motion.div>
               <motion.span
                 initial={{ opacity: 0.6 }}
@@ -183,14 +183,14 @@ export default function Hero() {
                   rotate: { duration: 30, repeat: Infinity, ease: "linear" },
                   opacity: { duration: 3, repeat: Infinity },
                 }}
-                className="absolute -inset-8 rounded-[2.5rem] ring-2 ring-cyan-400/10"
+                className="absolute -inset-8 rounded-full ring-2 ring-cyan-400/10"
                 aria-hidden="true"
               />
               <motion.span
                 initial={{ opacity: 0.8 }}
                 animate={{ opacity: [0.6, 0.9, 0.6] }}
                 transition={{ duration: 3, repeat: Infinity }}
-                className="absolute -inset-6 rounded-[2rem] bg-cyan-500/20 blur-2xl"
+                className="absolute -inset-6 rounded-full bg-cyan-500/20 blur-2xl"
                 aria-hidden="true"
               />
               <motion.div
